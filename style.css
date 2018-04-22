@@ -1,7 +1,8 @@
 body {
-    background-color: lightpink;
+    background-color: rgb(0, 179, 179);
     font-family: Georgia;
     text-align: center;
+    padding: 20px;
 }
 
 
@@ -19,18 +20,69 @@ body {
   text-decoration: none;
 }
 
+/* Two columns that float next to each other */
+.leftcolumn {
+  float: left;
+  width: 72%;
+}
 
-/* RESPONSIVENESS, EVENTUALLY
-@media (max-width: 500px) {
-      body{
-        background: red;
-      }
-      h1{
-        font-size: 36px;
-      }
-      li{
-        display: block;
-        padding: 5px;
-      }
-    }
-*/
+.rightcolumn {
+  float: right;
+  width: 25%;
+}
+
+
+/* Add a card effect for articles */
+.card {
+  background-color: grey;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#profilepic {
+  border-radius: 50%;
+  width: 80%;
+}
+
+.footer {
+  text-align: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+/* Responsive layout - when the screen is less than 800px wide,
+ make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
